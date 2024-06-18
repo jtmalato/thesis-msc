@@ -1,0 +1,249 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%   DISCUSSION   %%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%
+\chapter{Discussion}
+\label{ch:discussion}
+
+%%%%%%%%%%%%
+% OVERVIEW %
+%%%%%%%%%%%%
+\section{Project overview}
+
+% \textcolor{red}{Falar em como GMLs dizem que etnia Wachaga tem 1.81 de risco de ser infectado, mas que na realidade esse grupo é o menos afectado de todos. Possivelmente porque Others e Wachaga teriam que estar nas mesmas condições e os primeiros estão muito menos preparados para lidar com qualquer tipo de prevalência?}
+
+% \textcolor{red}{Different statistical approaches can be applied when studying malaria transmission intensity.Knowing how to apply different methodologies and models is crucial when evaluating or developing projects for public health interventions, or plan for possible infectious disease outbreaks \cite{keeling2009mathematical}}.
+% \textcolor{red}{Colocar parágrafos mais curtos.}
+The main objective of this project was to estimate and describe malaria transmission intensity, assessing the heterogeneity values from different sites.
+Using a benchmark cross-sectional survey data set from 21 Northeast Tanzanian villages with different endemic malaria intensities, various statistical methods were applied and tested.
+First, based on the recorded infections amongst individuals from the different population cohorts, generalised linear models (GLMs) were built (Chapter \ref{ch:4.0}).
+The models were set to infer about the primary transmission determinants influencing prevalence of infection.
+% The infection status from the sampled individuals was used as outcome when assessing the primary risk factors for infection incidence.
+Using different comparison methods and goodness-of-fit test statistics, the best model was selected.
+This structure when applied to a model described prevalence of infection through significant determinants such as altitude, transect, ethnic, gender, age groups, and the presence of antibodies for malaria antigens.
+Associating variables altitude and age group was also important to recreate a simplified categorical prevalence peak-shift, typically noticed when studying malaria in age-defined populations.
+% The study of exposure factors was of importance to identify and predict how malaria was expected develop at different villages \cite{binka1995risk}.
+The relative influence each demographical and exposure determinant had on prevalence of infection was assessed by the analyses of the model's odds ratios.
+The results corroborated what previous literature had described, relating altitude as proxy for malaria transmission intensity \cite{drakeley2005altitude, bodker2003relationship}, and identifying the importance of individual characteristic, such as age group \cite{carneiro2010age} or ethnicity (genetic background), when inferring about risk of \textit{P. falciparum} malaria infection.
+% granting individual protection \textcolor{red}{não trabalhei com protecção!! Não é necessário colocar isto, não vale a pena}.
+% This tool can be used to predict possible hotspots of infection.
+% Measures such as the prevalence rate or the entomological inoculation rate usually provide support to such inferences \cite{}.
+Results shown by the three exposure antigens \textit{MSP1}, \textit{MSP2}, and \textit{AMA1} suggested that their presence consistently increased the odds of infection, thus evidencing their importance as immunological and hazard indicators as a consequence to the exposure to \textit{P. falciparum} parasites.
+For the most immunogenic case, the sheer presence of the AMA1 antigen detected in children living in Mgome -- the most vulnerable age group and the village with the highest registered prevalence, 50.67\% -- increased the odds of infection from 61\% up to 136\%.
+This sensitivity for the exposure antigens to indicate individuals at odds based on their serological status was then used to measure the exposure to malaria parasites.
+% provided by the immunological variables was used.
+
+With some of the studied villages in a state of malaria pre-elimination -- potentially presenting recurrent asymptomatic cases -- the use of exposure antigens could bring information to more accurately measure malaria transmission intensity.
+Using the serological status for the three antigens as outcome of interest, reverse catalytic models (RCMs) were applied, assuming age as a proxy for time of exposure (Chapter \ref{ch:5.0}).
+% To optimise the study effectiveness to measure transmission intensity on those sites, reverse catalytic models (RCMs) were applied.
+Under different biological and epidemiological viewpoints, distinct RCMs were used.
+Their sero-epidemiological results were compared, characterising the transmission intensity from each village.
+% In these scenarios the more widely used case detection tools become limited to effectively estimate malaria transmission intensity \cite{stresman2012malaria}.
+% Once this low infection rate threshold is reached, clear malaria symptomatic cases become rare.
+% Even if mild symptoms were to be present, individuals might not seek for aid, as the disease it is not their main awareness concern \cite{}.
+% If they do, the infection can be misdiagnosed for other more common diseases at the time \cite{}.
+% Also, when inhabitants do not fear the impact of the low and controlled disease manifestations, areas with negligible transmission intensity may become challenges to reach an effective sample size and granting an adequate study power \cite{}.
+% %To deal with the  key approach to optimizing malaria responses within a country will be structuring programmes in response to stratification by malaria burden and based on an analysis of past malaria incidence data, risk determinants related to the human host, parasites, vectors and the environment that together with an analysis of access to services..
+% %The standard approaches are useful to estimate presence of infection in situations where endemic malaria occurs at high intensity rates, with several symptomatic cases at a time.
+% %It is then necessary to study possible alternatives \cite{malera2011research} in order to optimise population screenings \cite{sachs2002economic, stewart2009rapid}.
+% %as they tend to be expensive, time-consuming, and even with some lack of precision \cite{sachs2002economic, stewart2009rapid}.
+Based on the data sets, the majority of the villages transmission intensity was better characterised by the simpler RCM M$_0$.
+Estimates from this model, assuming both seroconversion and seroreversion rates (SCR and SRR) as constant across all ages, described the relations between transmission intensity and altitude, with SCR, proxy for transmission intensity, decreasing with altitude.
+The results also showed how SRR was affected by the transmission intensity levels, reaching values close to zero in response to low estimates of SCR.
+This might be due to the fact that in low transmission intensity villages, the transition into a antigen seropositive state tends to becomes a rare event.
+With few seropositive individuals, the rate for seroreversion and antibody waning is expected to be close to non existent.
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% IMPLICATIONS OF THE RESULTS %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Epidemiological implications of the results}
+
+% From the RCMs serological results, various conclusions can be taken.
+% In the first comparison between the proposed age-dependent seroreversion rate (SRR) models, M$_{1,2}$ was selected as the more parsimonious model.
+% The identification of this model suggested that after some time being exposed to a stable rate of transmission, all individuals, sooner or later, became permanently seropositives.
+Recently, sero-epidemiological studies from longitudinal surveys have shown that some malaria antigens express a decrease in SRR with age \cite{ondigo2014estimation}. % QUENIA!!
+These results came to contradict the overall assumption of constant SRR across all ages (assumed by the already published models M$_0$ and M$_2$).
+This age-dependent SRR reduction was proposed in model M$_{1,2}$, with limited success in intermediate altitude villages, but mostly rejected for the simpler model M$_0$ regardless the antigens tested.
+The results suggested that although biologically plausible, there was no sufficient information granted from the data that would allow the statistical acceptance of M$_{1,2}$.
+% Under the analysed data, the seroprevalence estimates from both models were similar across all sites.
+However, correlation tests showed underestimation of SCR from model M$_0$, relative to M$_{1,2}$.
+Estimates for SRR were different depending on the antigen, although values of $ \widehat{\rho}_1$ could be tendentiously higher to compensate for the sudden decrease to $\rho_2=0$, given $ \widehat{\uptau}$.
+
+The comparison of SCR estimates showed good correlations.
+However, the small underestimations from M$_{0}$ (3\% to 11\% depending on the antigen) could become consequential in a scenario of low transmission settings, where accuracy is of most importance.
+Estimates for SCR are usually the focused results when assessing malaria transmission intensity.
+This rate can be representative of the force of infection \cite{hens2012modeling}, and its values have a clear transitional interpretation to more traditional measures, such as the entomological inoculation rate (Table \ref{tab:EIR.to.SCR} from Appendices) \cite{bodker2003relationship,drakeley2005estimating}.
+With more areas reaching low transmission intensity, underestimating seroprevalence could produce misleading information, or even originate false sense of stability under a low transmission rate that otherwise could be taken for a somewhat more alarming event.
+% A precise estimate of SRR at given time can also help to predict how the the serological status of a population is trending, allowing to develop and predict future actions accordingly.
+
+Model M$_2$ was also used to estimate heterogeneity in malaria transmission.
+Since its proposal, M$_2$ has been used as a complement to M$_0$ \cite{dewasurendra2017effectiveness} and applied to estimate and monitor the effectiveness of campaigns for malaria control \cite{cook2010using,cook2011serological}.
+No literature was found indicating that specific actions for control of malaria infection took place on the studied villages.
+% \textcolor{red}{In the Northeast Tanzanian case, neither the past serological status of each village, nor possible recent actions for control of malaria infections were known \textcolor{red}{unknown for you...}. Não existem artigos publicados na literatura que indiquem um controlo específico nestas populações.}
+Model M$_2$ was then applied under the hypothesis of possible historical changes in transmission intensity, being tested against M$_0$ for the significance of such changes.
+% under the epidemiological hypothesis that some villages could had in fact been exposed to interventions.
+The comparison results suggested only few villages went through statistically significant SCR changes in past decades, and consequentially, their transmission intensity.
+Other results suggested some villages had only recently changed their exposure rate (villages where $ \widehat{\uptau}^*=1$), consequently changing its SCR.
+These sites were mostly located at low altitudes, with medium to high transmission settings.
+% Despite the parametric restriction proposed for model M$_2$ ($\lambda_1\geq\lambda_2$), some villages where $\uptau^*$ was equal to one, estimated $\lambda_2$ with a higher value than $\lambda_1$.
+% Although not intended, by occurring almost entirely on medium to low altitude villages, this event could grant some information about the sites.
+% In those villages, children between one and two years old represented the interval where model M$_2$ identified the greatest change in SCR across all ages.
+% % This event ($\uptau^*=1$) causes M$_2$ to estimate seroprevalence using only the upper bracket from equation (\ref{eq:rcm.reduction.scr}).
+% The seroprevalence curves generated under this assumption ($\uptau^*=1$) did not present the characteristic biphasic behaviour from M$_2$ (Figure \ref{fig:seroprevalence.M0.M12}).
+% An example was the village Tamota.
+% Despite a statistically significant change in SCR for two antigens, with an estimated cutoff equal to one, its maximum likelihood estimators for $\lambda_2$ were higher than $\lambda_1$ in both occasions.
+% This could also be malfunction from the package, due to the small amount of information available to perform more precise estimations at each year.
+% Being the statistically more parsimonious, model M$_0$ presented underestimated parameter values when compared to M$_{1,2}$.
+% It is worth mention the estimation of SRR has been shown difficult to estimate when using cross-sectional surveys.
+% The difficulty can create some uncertainties when estimating the change point parameter $\uptau$, in the profile likelihood method.
+% Are examples the model results for the MSP1 seroprevalence outcome (Table \ref{tab:M12.M11.msp1}), where both models estimate $\rho_1$ equal to zero at different cutoff values, for the villages Kilomeni, Ngulu, Mpinji, Tewe, and Kwadoe.
+% As the more immunogenic, AMA1 is expected to be more easily detected at lower intensities of transmission, where other antigens might be significantly reduced.
+% This sensitivity have resulted in less significant or noticeable changes in seroprevalence estimation.
+% Non significant changes in SCR for AMA1 antigens have also been reported in \textit{P. vivax} analyses, under similar conditions \cite{cook2010using}.
+For these situations, the parametric restriction proposed for model M$_2$ ($\lambda_1\geq\lambda_2$) was even disregarded, with estimates for $ \widehat{\lambda}_2$ presenting higher values than $ \widehat{\lambda}_1$.
+One interpretation could be the detection of maternal antibodies that endured for more than the first year of a child's life.
+Other hypothesis could be that with a widespread infection across all ages in low altitude villages, children between one and two years old represented the interval where model M$_2$ identified the more considerable change in SCR, representing when the infants first experiment an exposure to the malaria parasites.
+Under this assumption of early SCR change, the generated seroprevalence curves did not present the characteristic biphasic behaviour (as seen in Figure \ref{fig:seroprevalence.M0.M2}).
+% These estimates could also be a malfunction from the \emph{SEROAID} package, due to the reduced information available from the data to perform more precise estimations in each year.
+
+The reduced number of significant changes in SCR when AMA1 antigen outcomes were used -- only one village identified -- have been reported in analyses done in \textit{P. vivax} parasites \cite{cook2010using}.
+Due to its high immunogenicity (population reports for more than 80\% seropositive individuals by 20 years old \cite{ondigo2014estimation}), it is possible that despite an historical change, some molecular specialised tests still detected reasonable amounts of this antigen.
+
+
+
+%%%%%%%%%%%%%%%
+% LIMITATIONS %
+%%%%%%%%%%%%%%%
+\section{Statistical and epidemiological limitations}
+
+% \textcolor{red}{variáveis climáticas estão diractamente relacionadas e representadas pela altitude.}
+% During this project, important limitations were identified.
+% First, the cross-sectional survey that originated the data.
+% % used in a study pushing sero-epidemiology as a benchmark tool to estimate malaria transmission intensity in low transmission settings.
+% The restricted sampling applied to the different population cohorts may have forced some level of heterogeneity amongst the individuals.
+% To create similar transects of four distinct villages, the study may have forcibly encompassed geographically different villages.
+% Transects such as Rombo or West Usambara 3 enclose distant villages.
+% Contrarily, the South Pare transect selected villages with such high levels of proximity that they may influence each other.
+% \textcolor{red}{Isto está errado -- cada transect tem um grupo específico!!!!}
+% The identification of a major ethnic group describing each transect could have also originated biased interpretations based on genetic differences.
+% Second, known important recorded variables were set aside for the study analyses.
+% Climate characteristics such as temperature and rainfall, greatly influence transmission intensity through humidity and seasonality \cite{warrell2002essential, drakeley2005altitude}.
+% With a set of villages defined by their altitude and geographical position, not including these explanatory variables must had greatly decreased the predictive power of the GLMs developed.
+
+During this project, important limitations were identified.
+The first was during the implementation of the simple GLMs to the data, when apparent more complex dependencies between variables were noticeable.
+Within each transect, villages shared not only the same ethnic group, but also the described geographical proximity when in relation to the other studied sites.
+When using the GLMs, these implications were disregarded with models assuming independence between the parameters of all villages.
+The logistic \texttt{fit10} selected in Chapter \ref{ch:4.0}, performed well when inferring the odds of malaria infection, as well as justifying the heterogeneity measured.
+% \textcolor{red}{However, despite the comparison methods suggesting good accuracy, uncertainties associated with the goodness-of-fit tests suggested some lack of information.}
+The model was used for its descriptive abilities, being refrained from use as a broad predictive tool due to this limitation that could, eventually, be amended by focusing on the dependencies between variables.
+% Dizer que, apesar de tudo, e embora os métodos de comparação tenham indicado boa precisão em relação ao modelo construído, os resultados do programa foram demonstrados como uma falha de informação, mantendo o modelo fit10 longe de ser perfeito. Este modelo não pode ser usado como uma ferramenta de previsão (ou seria suspeito).
+These relations could possibly have been taken into account through use of generalised linear multilevel models (GLMMs).
+The GLMMs delineate different hierarchical levels where the villages' systematic structures would be nested within a random factor level that could be defined by the transect categorical variable, \textit{Transect}.
+However, the development of these more models was out of the scope of this thesis.
+% would be time consuming, being set aside as the application and inference from the RCMs was the major purpose of the project.
+% Although these correlations show how useful this set can be, the results do not go all the way when it comes to study the disease in low transmission settings \cite{stresman2012malaria}, thus application of alternative or more specific stochastic models to study disease spread can be a good alternative.
+
+The RCMs also presented limitations as they are infinite population models.
+% This set of models is specific for infinite populations.
+Despite producing informative estimates, the application of the models to the limited sample sizes recorded in each village might not have been enough to statistically discern between each proposed model.
+% \textcolor{red}{Não sabendo a village sample size posso estar muito longe da hipótese de infinite population}
+Furthermore, the data in which the RCMs were applied to had a specific age structure with children between 1 and 4 years being oversampled in relation to other ages, because the original study used the effect of defined age groups in its survey \cite{drakeley2005estimating}.
+Possibly, by increasing the sample size of the study, model M$_{1,2}$ would have a justification to be applied and produce more consistent significant results.
+% Despite the global pattern justification form the models, by analysing the true prevalence values calculated at each village (Table \ref{tab:prevalence.seroprevalence}), one may see the predicted prevalence may have more 
+% Also the recent signals for climate change and global warming may allow the \textit{Anopheles} mosquitoes to colonise higher altitudes and farther latitudes.
+% Drug, sprays, and nets, although immensely useful in protecting the majority of the population and controlling infection spread, may never the part of the solution.
+% Falar de vacinas!
+% Vaccines exist for bacteria and viruses, who by comparison are simpler organisms.
+% Referir a importância de criar unidades multidisciplinares para a actuação e eliminação da malária.
+% Referiri de como um follow up study poderia evidenciar possíveis efeitos de migração/emigração dentro (e entre) as várias regiões.
+% Seroepidemiological studies are especially useful in low transmission settings where the sensitivity of parasite prevalence surveys is limited by the scarcity of parasite positive individuals \cite{cook2010using}.
+% Falar da temperatura e rainfall (importantes no estudo original) que têm grande efeito mas que não usei aqui -- pelo menos não directamente (usei altitude, que está correlacionada, justificar).
+When applying this model, some villages certainly presented limited information to accurately estimate SRR (Tables \ref{tab:M0.M12.msp1} and Tables \ref{tab:M0.M12.msp2} and \ref{tab:M0.M12.ama1} from Appendices \ref{appendix:M0vM12}).
+These situations resulted in non expected estimated values of $ \widehat{\rho}_1$ and respective confidence intervals, showing the difficulty of estimating the parameter when using samples form cross-sectional surveys.
+The difficulty can also create some uncertainties when estimating the change point parameter $ \widehat{\uptau}$ in the profile likelihood method.
+% However, if in further analyses this event continues to show, one could apply the data using a RCM under the complementary log-log equation (\ref{eq:rcm.cloglog}).
+
+% \textcolor{red}{no caso de transição baixa rho~0, não é tao descabido assumir um modelo cloglog}
+% \textcolor{red}{iSTO ESTÁ EM PORTUGUÊS: Are examples the model results for the MSP1 seroprevalence outcome (Table \ref{tab:M12.M11.msp1}), where both models estimate $\rho_1$ equal to zero at different cutoff values, for the villages Kilomeni, Ngulu, Mpinji, Tewe, and Kwadoe.}
+% It is worth mention the estimation of SRR has been shown difficult to estimate when using cross-sectional surveys.
+% This difficulty also created uncertainties when estimating the change point parameter $\uptau$ in the profile likelihood method.
+% Are examples the model results for the MSP1 seroprevalence outcome (Table \ref{tab:M12.M11.msp1}), where both models estimate $\rho_1$ equal to zero at different cutoff values, for the villages Kilomeni, Ngulu, Mpinji, Tewe, and Kwadoe.
+%However, the uncertainty association with the estimation of  is very high, as demonstrated by the respective confidence intervals. Note that data from Kilomeni and Tewe led to estimates of 1 equal to zero, showing the difficulty of estimating SRR using cross-sectional surveys.
+%\textbf{Falar das dificuldades em estimar este parâmetro em cross-sectional studies, como se pode ver pelos $\rho_1=0$ estimados em algumas das vilas (name them); bem como correctamente identificar a os valor exacto de $\uptau$, como se pode ver pelos intervalos de confiança estimados.}
+%To identify the model that best expresses acquired immunity when SCR is stable, M$_{1,1}$ was fit to the data of each village and its results against M$_{1,2}$ (Table \ref{tab:M11_M12}).
+
+%%%%%%%%%%%%%%
+% EXTENSIONS %
+%%%%%%%%%%%%%%
+\section{Further extensions}
+
+% \textcolor{red}{Extender a teoria e meter exemplos (nomeadamente meter os clusteres por transect e que tal).}
+If the intention was to measure malaria transmission intensity based only on models predicting prevalence of infection through the defined variables -- instead of seroprevalence via the RCMs -- some specifications or generalisations to the used linear model could be applied.
+The generalised estimating equations (GEEs), being an extension of the GLMs, were developed specially to analyse discrete clustered data with correlated dependencies influencing the outcome.
+% \cite{}(GEE 1986)
+Similar to the GLMs, the GEEs return responses that can be viewed as directly related to the more traditional tools to measure malaria transmission.
+This set of models has increasingly been used to study public health longitudinal surveys with multiple cohorts \cite{hanley2003statistical,hubbard2010gee}.
+Applying the GEEs to the Northeastern Tanzania data, clusters for transect and geographically closer villages could be created, adding an estimated correlation matrix relating the outcomes.
+The downside of this method could be the sample sizes of each related village.
+The sheer number of individuals would create large correlation matrices, limiting the correlation structures given by the GEEs to perform the estimates.
+If focused on a single village under more precise data, the GEEs could potentially further generate correlation between household families.
+% \textcolor{red}{potencialmente poder-se-ia usar clusteres dentro de households, dentro das próprias vilas}.
+
+% \textcolor{red}{Este parágrafo terá de ser explicado relativamente ao futuro: o estudo e simulação vai ter de ser toda refeita:
+A side project of this thesis is still under development, with the intent of extend the understanding of the statistical power from the models assuming age-dependent change in SRR (models M$_{1,1}$ and M$_{1,2}$).
+Due to the difficulty of rejecting M$_0$ for M$_{1,2}$ in the populations assessed in this thesis, the project will sample different simulated populations with different levels of initially defined parameters $\lambda$, $\rho_1$, $\rho_2$, and $\uptau$.
+The parameter values are chosen in order to directly relate to different possible values of the EIR measure (Table \ref{tab:EIR.to.SCR} from Appendices).
+A thousand populations with different sizes (1000, 5000, 10 000, 25 000, 50 000, and 100 000 individuals) will be simulated and analysed using models M$_{1,1}$ and M$_{1,2}$, calculating the true SCR.
+Then, model M$_0$ will be instantiated with the true SCR onto the same simulated populations, estimating new values for SCR and SRR.
+% Instantiating the true SCR to perform estimates with model M$_0$, that estimated SCR and SRR for the populations.
+The results from the different models will be compared through likelihood ratio tests, with the proportion of rejections of M$_0$ for M$_{1,1}$ or M$_{1,2}$ at each simulated data, indicating the power of the age-dependent SRR model.
+% This simulation study was performed in an original paper proposing the age-dependent models.
+The results from this project could increase the knowledge on the estimation of SRR, proving this rate to be of importance when performing sero-epidemiological studies.
+% The results showed that the probability of rejecting M$_0$ in sample sizes lower than 5000 individuals is less than 25\%, and for data sets of 100 000 individuals, the probability of rejecting the simpler model was at best 50\%.
+% Only when comparing M$_0$ against the more drastic model M$_{1,2}$ ($\rho_2=0$) the probability of rejection reached 90\%.
+% And even then, the sample sizes must had between 10 000 and 50 000 individuals.
+% The results showed how difficult it is to reject M$_0$ for the age-dependent models, even though this simpler model is a less realistic proposal.
+% This could be due to the limiting information provided to estimate both SCR and SRR.
+
+\newpage
+%%%%%%%%%%%%%%
+% CONCLUSION %
+%%%%%%%%%%%%%%
+\section{Conclusion}
+
+The research done to study malaria have many fronts.
+Various approaches can be applied, all with the main objective of eradicating malaria infections from burdened sites.
+The production of efficient vaccines is still under developing, however, actions such as distribution of treated mosquito nets and campaigns to directly control the mosquito populations have produced great results, while improving the life conditions of the inhabitants living on those affected sites.
+
+Statistical models, such as spatial, temporal or stochastic models, are important tools to efficiently and quantitatively deal with malaria and its dynamics.
+They allow for approaching the field of biology in a more controlled way, being widely applied in epidemiology and public health sciences.
+Sero-epidemiology is in this scenario an innovative tool, presenting advantages in the implementation methods on the field and adapting to the recent decreases in malaria transmission intensity.
+% \textcolor{red}{Serology-based model inferences have been used to model different infectious diseases that spread through proximity and contact, developing detectable and recognisable specific immunity \cite{hens2012modeling}.}
+The RCMs used and compared throughout this thesis were able to estimate the annual seroconversion rate, as well as the seroreversion rate across various sites. These rates could bring new light onto the disease dynamics modelled by different variables such as altitude, age or genetics.
+% However, no statistical model constructed can claim to be the correct model, and represent the truth.
+In the analyses, the simpler and more broadly used RCM was not rejected when tested against the others.
+However, one might suggest that in alternative scenarios, models such as the age-dependent SCR model may be more suited.
+The continuous innovation of these techniques could only help to further explore the possibilities to positively control one of the most important diseases humanity has faced.
+% may be the only way for approaching complex quantitative aspects of biological systems in a more rigorous thinking.
+% As a scientific activity, they often engage in a different way of doing science and they provide a natural bridge to the applied sciences and public health.
+
+% Statistical models are essentially descriptive and, inasmuch as they are based on experimental or observational data, may be described as empirical models.
+% The structure of an empirical model will therefore be crucially dependent upon the data. 
+% In contrast, mathematical models are largely based on the underlying subject area
+% Imunologia depende largamente de casa indivíduo. Uns podem desenvolver logo outros demora muito mais tempo. Há logo à partida uma selecção natural.
+
+% More frequent and higher quality statistics are critical for a better monitoring and evaluation of development programs and more inclusive decision-making process.
+% The GoT new initiatives place a strong focus on results to improve performance and accountability. This calls for increased quality and frequency in the production of statistical information to continuously and consistently measure the results.
+% In particular, accurate and timely household survey data are of critical importance for the effective design and monitoring of development programs and for promoting greater accountability. 
+% They represent the cornerstone for sustainably monitoring the twin goals of poverty reduction and shared prosperity as well as many of the SDG indicators.
+% While Tanzania has made gains in the availability of statistical information and survey data and can be considered as data rich compared to countries of similar levels of income, the availability of timely household surveys remains limited and the time intervals between poverty estimates are still quite large.
+
+% There is a need to improve the quality and frequency of household survey data to ensure a more effective monitoring and evaluation of key performance indicators and targets of poverty reduction. \textbf{cite: Combined Project Information Documents / Integrated Safeguards Datasheet (PID/ISDS)}
+
+% Transmission dynamics of the infection from individual to individual in the populations.
+% This idea of transmission can usually be generalised into transmissions of genetic characteristics, such as gender, race, genetic diseases, cultural characteristics such as language or religion, or even addictive activity, such as drug use and gain or loss of information communicated through gossip, rumors and so on. \cite{brauer2012mathematical}
+% Depending on the disease, different study approaches may be chosen to better quantify the disease dynamics. For example, in the \textit{Chagas} disease, a ´house' may be chosen (infested house = infected individuals) as a epidemiological unit.
+% On the other and, for tuberculosis, due to its rapid spread under viable conditions, the chosen unit may be a community or group of strongly linked cluster of individuals.
+
+% \textbf{When talking about the importance of eradicating malaria after its reduction:} The Garki project -- non profit study conducted by the WHO from 1969 to 1976 -- provided a dramatic example of the causes of eradicating malaria from a region temporarily \textbf{citar Garki project}.
+% Based on some successes in malaria control using the initial provided mathematical models \cite{ross1911math} that predicted that malaria outbreaks could be avoided if the mosquito population could be reduced below a critical threshold level \textbf{citar fórmula do Roanld Ross}, the Garki project elimitated malaria, creating temporary windows that left the inhabitants without immunity by the campaign end, with resulting serious outbreaks of malaria.

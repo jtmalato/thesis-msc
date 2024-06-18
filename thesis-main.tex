@@ -1,0 +1,98 @@
+% So it begins ----------
+\documentclass[a4paper,11pt,twoside]{report}
+\usepackage[left=2.5cm,right=2.5cm,top=2.5cm,bottom=2.5cm]{geometry}
+
+\usepackage[english]{babel}
+\usepackage[utf8x]{inputenc} % for all the stylish Portuguese accents
+\fontfamily{times}
+\usepackage{titlesec}
+
+\usepackage{setspace} % footnotes, figures and tables remain sigle-spaced
+\parindent=0em
+\parskip=12pt
+
+%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%% PACKAGE FILE %%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%
+\include{thesis-packages} % this document has all the packages, newcomands lines and the rest of the Latex macropages (.sty)
+
+\makeatletter
+    \def\thebibliography#1{\chapter*{References\@mkboth
+      {REFERENCES}{REFERENCES}}\list
+      {[\arabic{enumi}]}{\settowidth\labelwidth{[#1]}\leftmargin\labelwidth
+	\advance\leftmargin\labelsep
+	\usecounter{enumi}}
+	\def\newblock{\hskip .11em plus .33em minus .07em}
+	\sloppy\clubpenalty4000\widowpenalty4000
+	\sfcode`\.=1000\relax}
+    \makeatother
+
+\begin{document}
+
+%%%%%%%%%%%%%%%%%%%%%%
+%%%%% TITLE PAGE %%%%%
+%%%%%%%%%%%%%%%%%%%%%%
+% What do I need to fill -----
+\title{\LARGE {\bf Statistical approaches to measure heterogeneity in malaria transmission intensity:\\ An epidemiological study on the Tanzania populations}\\
+\vspace*{6mm}
+}
+\university{Universidade de Lisboa}
+\faculty{Faculdade de Ciências}
+\dept{Departamento de Estatística e Investigação Operacional}
+\author{João Torrado Malato}
+\masters{Mestrado em Bioestatística}
+\supervisor{Prof. Doutor Nuno Sepúlveda}
+\supervisora{Prof.ª Doutora Marília Antunes}
+\submitdate{2018}
+%%%%%%%%%%%%%%%%%%%%%%
+\maketitle % title page
+
+%%%%%%%%%%%%%%%%%%%
+%%%%% PREFACE %%%%%
+%%%%%%%%%%%%%%%%%%%
+
+\preface % all this needs to have ROMAN NUMERATION
+\input{quotes.tex}
+\input{acknowledgements.tex}
+\newpage
+\input{abstract/resumo.tex}
+\newpage
+\input{abstract/abstract.tex}
+%\input{dedication}
+
+
+%%%%%%%%%%%%%%%%
+%%%%% BODY %%%%%
+%%%%%%%%%%%%%%%%
+\body
+\input{chapters/chapter1.tex}
+%\input{chapters/chapter1_notes.tex}
+\input{chapters/chapter2.tex}
+%\input{chapters/chapter2_notes.tex}
+\input{chapters/chapter3.tex}
+%\input{chapters/chapter3_notes.tex}
+\input{chapters/chapter4.tex}
+\input{chapters/chapter5.tex}
+
+%%%%%%%%%%%%%%%%%%%%%%
+%%%%% DISCUSSION %%%%%
+%%%%%%%%%%%%%%%%%%%%%%
+\input{discussion/discussion.tex}
+
+\newpage
+%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%% BIBLIOGRAPHY %%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%
+\addcontentsline{toc}{chapter}{References}
+\bibliography{bibliography.bib}
+\bibliographystyle{nar} % estilo/estrutura que aparece na 
+
+%%%%%%%%%%%%%%%%%%%%%%
+%%%%% APPENDICES %%%%%
+%%%%%%%%%%%%%%%%%%%%%%
+\input{appendices/appendices.tex}
+
+\pagestyle{plain}
+\cleardoublepage
+
+\end{document}

@@ -1,0 +1,162 @@
+% ADDED PACKAGES AND STRUCTURE OPTIONS ------------------------------
+
+% \input{uhead.sty}
+% \input{blocked.sty} % identation?
+% \input{boxit.sty}   % to draw a box around the text - labels the page with the chapters
+\input{thesis-structure.sty} % knit thesis structure
+
+
+%%%%%%%%%%%%%%%%%%%%
+%%%%% PACKAGES %%%%%
+%%%%%%%%%%%%%%%%%%%%
+
+\usepackage{adjustbox}
+\usepackage{afterpage}
+\usepackage{amsfonts}
+\usepackage{amsmath} % for intense use of mathematical symbols
+\usepackage{amssymb} % forarrows and such in equations
+\usepackage{amsthm}
+\usepackage{array}
+\usepackage{auto-pst-pdf}
+\usepackage[toc,page]{appendix}
+\usepackage{bm} % bold symbols
+\usepackage{booktabs}
+\usepackage{breqn} % automatic line breaking in equations - useful
+\usepackage[font=small, labelfont=bf]{caption}
+\usepackage{color}
+\usepackage{enumitem}
+\usepackage{epsf}
+\usepackage{epsfig}
+\usepackage{epstopdf}
+\usepackage{fancybox}
+\usepackage{float} % figures and tables
+\usepackage{geometry}
+\usepackage{graphicx} % import graphics
+\usepackage[hidelinks]{hyperref}  % for references and labels
+\usepackage{latexsym} % some extra symbols
+\usepackage{listings}
+\usepackage{mathchars} % presentation of math characters
+\usepackage{makecell}
+\usepackage{multirow}
+\usepackage[numbers,sort]{natbib} % citations
+\usepackage{paralist}    % To enable customise enumerates
+\usepackage{pst-plot}
+\usepackage{pstricks}
+\usepackage{pstricks-add}
+\usepackage{rotating}
+\usepackage{scrextend} % add lists
+\usepackage{setspace} % set spacing between the lines
+\usepackage{soul}
+\usepackage{subcaption} % for subfigures
+\usepackage{tabularx}
+\usepackage{tikz}
+\usepackage{tikzinput}
+\usepackage[colorinlistoftodos, textwidth=60, textsize=small]{todonotes}
+\usepackage[normalem]{ulem} % underline options
+\usepackage{upgreek}
+\usepackage{url} % allows linebreaks at certain characters or combinations of characters
+\usepackage{verbatim} % comment environment
+% \usepackage[svgnames]{xcolor}
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%% EXTRAS FROM TEMPLATE %%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\let\origappendix\appendix % save the existing appendix command
+\renewcommand\appendix{\clearpage\pagenumbering{roman}\origappendix}
+
+\def\undertilde#1{\mathord{\vtop{\ialign{##\crcr $\hfil\displaystyle{#1}\hfil$\crcr\noalign{\kern1.5pt\nointerlineskip}
+$\hfil\tilde{}\hfil$\crcr\noalign{\kern1.5pt}}}}}
+
+\def\coop{\mbox{\large $\rhd\!\!\!\lhd$}}
+\newcommand{\sync}[1]{\raisebox{-1.0ex}{$\;\stackrel{\coop}{\scriptscriptstyle
+#1}\,$}}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%% NEW COMMANDS %%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%
+\newcommand{\ipc}{{\sf ipc}}
+\newcommand{\Prob}{\bbbp}
+\newcommand{\Real}{\bbbr}
+\newcommand{\real}{\Real}
+\newcommand{\Int}{\bbbz}
+\newcommand{\Nat}{\bbbn}
+% syze of letters ------------------------------
+\newcommand{\NN}{{\sf I\kern-0.14emN}}   % Natural numbers
+\newcommand{\ZZ}{{\sf Z\kern-0.45emZ}}   % Integers
+\newcommand{\QQQ}{{\sf C\kern-0.48emQ}}   % Rational numbers
+\newcommand{\RR}{{\sf I\kern-0.14emR}}   % Real numbers
+% mathematical letters ------------------------------
+\newcommand{\KK}{{\cal K}}
+\newcommand{\OO}{{\cal O}}
+% bold letters ------------------------------
+\newcommand{\AAA}{{\bf A}}
+\newcommand{\HH}{{\bf H}}
+\newcommand{\II}{{\bf I}}
+\newcommand{\LL}{{\bf L}}
+\newcommand{\PP}{{\bf P}}
+\newcommand{\PPprime}{{\bf P'}}
+\newcommand{\QQ}{{\bf Q}}
+\newcommand{\UU}{{\bf U}}
+\newcommand{\UUprime}{{\bf U'}}
+\newcommand{\zzero}{{\bf 0}}
+\newcommand{\ppi}{\mbox{\boldmath $\pi$}}
+\newcommand{\aalph}{\mbox{\boldmath $\alpha$}}
+\newcommand{\bb}{{\bf b}}
+\newcommand{\ee}{{\bf e}}
+\newcommand{\mmu}{\mbox{\boldmath $\mu$}}
+\newcommand{\vv}{{\bf v}}
+\newcommand{\xx}{{\bf x}}
+\newcommand{\yy}{{\bf y}}
+\newcommand{\zz}{{\bf z}}
+\newcommand{\oomeg}{\mbox{\boldmath $\omega$}}
+\newcommand{\res}{{\bf res}}
+\newcommand{\cchi}{{\mbox{\raisebox{.4ex}{$\chi$}}}}
+%\newcommand{\cchi}{{\cal X}}
+%\newcommand{\cchi}{\mbox{\Large $\chi$}}
+% Logical operators and symbols ------------------------------
+\newcommand{\imply}{\Rightarrow}
+\newcommand{\bimply}{\Leftrightarrow}
+\newcommand{\union}{\cup}
+\newcommand{\intersect}{\cap}
+\newcommand{\boolor}{\vee}
+\newcommand{\booland}{\wedge}
+\newcommand{\boolimply}{\imply}
+\newcommand{\boolbimply}{\bimply}
+\newcommand{\boolnot}{\neg}
+\newcommand{\boolsat}{\!\models}
+\newcommand{\boolnsat}{\!\not\models}
+\newcommand{\op}[1]{\mathrm{#1}}
+\newcommand{\s}[1]{\ensuremath{\mathcal #1}}
+% Properly styled differentiation and integration operators ------------------------------
+\newcommand{\diff}[1]{\mathrm{\frac{d}{d\mathit{#1}}}}
+\newcommand{\diffII}[1]{\mathrm{\frac{d^2}{d\mathit{#1}^2}}}
+\newcommand{\intg}[4]{\int_{#3}^{#4} #1 \, \mathrm{d}#2}
+\newcommand{\intgd}[4]{\int\!\!\!\!\int_{#4} #1 \, \mathrm{d}#2 \, \mathrm{d}#3}
+% Large () brackets on different lines of an eqnarray environment ------------------------------
+\newcommand{\Leftbrace}[1]{\left(\raisebox{0mm}[#1][#1]{}\right.}
+\newcommand{\Rightbrace}[1]{\left.\raisebox{0mm}[#1][#1]{}\right)}
+% Funky symbols for footnotes ------------------------------
+\newcommand{\symbolfootnote}{\renewcommand{\thefootnote}{\fnsymbol{footnote}}}
+% now add \symbolfootnote to the beginning of the document...
+\newcommand{\normallinespacing}{\renewcommand{\baselinestretch}{1.15} \normalsize}
+\newcommand{\mediumlinespacing}{\renewcommand{\baselinestretch}{1.2} \normalsize}
+\newcommand{\narrowlinespacing}{\renewcommand{\baselinestretch}{1.0} \normalsize}
+\newcommand{\bump}{\noalign{\vspace*{\doublerulesep}}}
+\newcommand{\cell}{\multicolumn{1}{}{}}
+\newcommand{\spann}{\mbox{span}}
+\newcommand{\diagg}{\mbox{diag}}
+\newcommand{\modd}{\mbox{mod}}
+\newcommand{\minn}{\mbox{min}}
+\newcommand{\andd}{\mbox{and}}
+\newcommand{\forr}{\mbox{for}}
+\newcommand{\EE}{\mbox{E}}
+\newcommand{\deff}{\stackrel{\mathrm{def}}{=}}
+\newcommand{\syncc}{~\stackrel{\textstyle \rhd\kern-0.57em\lhd}{\scriptstyle L}~}
+
+
+\newtheorem{definition}{Definition}[chapter]
+\newtheorem{theorem}{Theorem}[chapter]

@@ -1,0 +1,273 @@
+\begin{appendices}
+\pagestyle{plain}
+% \begin{center}
+% \chapter*{\centering Appendices}
+% \addcontentsline{toc}{section}{Appendices}
+% \end{center}
+\newpage
+\pagenumbering{roman}
+\renewcommand{\thesubsection}{\Alph{subsection}}
+
+%%%%%%%%%%%%%%%%%%%%%%%
+% MODEL M0 DERIVATION %
+%%%%%%%%%%%%%%%%%%%%%%%
+\subsection{Model M$_0$ derivation} \label{appendix:M0.derivation}
+
+Knowing seronegative individuals become seropositive at rate $\lambda_t$ and seropositive individuals revert at rate $\rho_t$, the proportion of seropositive individuals in a cohort $P$ is defined by the differential equation \cite{yman2016antibody}
+%
+\begin{equation}
+    \frac{dP}{dt}=\lambda_t (1-P) - \rho_t P\ .
+\end{equation}
+%
+\noindent
+Considering model M$_0$, with constant transmission rates, $\lambda_t=\lambda$ and $\rho_t=\rho$, this equation can be solved to estimate the proportion of individuals of age $t$ at each cross-section.
+%
+\begin{equation}
+\label{eq:apendix.2}
+\begin{split}
+    \int \frac{1}{\lambda(1-P)-\rho P}\ dP =& \int dt \Leftrightarrow \\
+    \Leftrightarrow \int \frac{1}{\lambda-P(\lambda+\rho)}\ dP =&  \int dt \Leftrightarrow \\
+    \Leftrightarrow -\frac{1}{\lambda+\rho} \int \frac{-(\lambda+\rho)}{\lambda-P(\lambda+\rho)}\ dP =&  \int dt \Leftrightarrow \\
+    \Leftrightarrow -\frac{1}{\lambda+\rho} \ln(\lambda-P(\lambda+\rho)) =&\  t+c \Leftrightarrow \\
+    \Leftrightarrow \  \ln(\lambda-P(\lambda+\rho)) =& -(\lambda+\rho)(t+c) \Leftrightarrow \\
+    %\Leftrightarrow \  P(\lambda+\rho) =& \ \lambda - e^{ \left\{ -(\lambda+\rho)t-(\lambda+\rho)c\right\}} \Leftrightarrow \\
+    \Leftrightarrow \  P =&\  \frac{\lambda - e^{ \left\{ -(\lambda+\rho)t-(\lambda+\rho)c\right\}}}{\lambda+\rho}\ .
+\end{split}
+\end{equation}
+
+\noindent
+Since a true seropositive state could only be achieved by being exposed to the malaria parasites (not accounting for the maternal acquired antibodies), this model assumes that no individual is seropositive at the moment of birth, i.e. $P(0)=0$, thus
+%
+\begin{equation}
+\begin{split}
+    \frac{\lambda - e^{ \left\{-(\lambda+\rho)0-(\lambda+\rho)c\right\}}}{\lambda+\rho} = &\  0 \Leftrightarrow \\
+    \frac{\lambda - e^{ \left\{-(\lambda+\rho)c\right\}}}{\lambda+\rho} = &\  0 \Leftrightarrow \\
+    %\Leftrightarrow \frac{e^{ \left\{-(\lambda+\rho)c\right\}}}{\lambda+\rho} = &\  \frac{\lambda}{\lambda+\rho} \Leftrightarrow \\
+    \Leftrightarrow e^{ \left\{-(\lambda+\rho)c\right\}} =& \ \lambda \Leftrightarrow \\
+    %\Leftrightarrow -(\lambda+\rho)c =& \ \ln(\lambda) \Leftrightarrow \\
+    \Leftrightarrow c =& -\frac{\ln(\lambda)}{\lambda+\rho}\ ,
+\end{split}
+\end{equation}
+%
+\noindent
+that can be directly applied onto previous equation (\ref{eq:apendix.2}),
+%
+\begin{equation}
+\begin{split}
+    %P =&\  \frac{\lambda - e^{ \left\{ -(\lambda+\rho)t+(\lambda+\rho)\frac{\ln(\lambda)}{\lambda+\rho}\right\}}}{\lambda+\rho} \\
+    P =&\  \frac{\lambda - e^{ \left\{ -(\lambda+\rho)t+\ln(\lambda)\right\}}}{\lambda+\rho} \\
+    =&\ \frac{\lambda-e^{\left\{ -(\lambda+\rho)t \right\}}\lambda}{\lambda+\rho} \\
+    =& \frac{\lambda}{\lambda+\rho}\left(1- e^{\left\{ -(\lambda+\rho)t \right\}}\right)\ .
+\end{split}
+\end{equation}
+
+\newpage
+
+
+
+\subsection{Relationship between SCR, EIR, and the cutoff for SRR reducion}\label{appendix:EIR.and.SCR}
+
+\begin{table}[H]
+\centering
+\caption[Relationship between SCR, EIR, and the cutoff for SRR reducion]{Relationship between SCR and the age in years at which SRR is expected to reduce from $\rho_1$ to $\rho_2$ (with $\rho_1 \geq \rho_2$). As previously described, estimates for SCR have a somewhat direct translation to the entomological inoculation rate measure (EIR), that identifies the number of infective bites received per person in a year, in a human population.}
+\label{tab:EIR.to.SCR}
+\begin{tabular}{ccc}
+\toprule
+EIR & SCR, $\lambda$ & \begin{tabular}[c]{@{}c@{}}Age of SRR\\reduction, $\hat{\uptau}$\end{tabular}      \\ 
+\midrule
+100  & 0.2900 & 3, 5                                                                  \\
+10   & 0.0969 & 5, 10                                                                 \\
+1    & 0.0324 & 5, 10                                                                 \\
+0.1  & 0.0108 & 10, 15, 20                                                            \\
+0.01 & 0.0036 & 10, 15, 20                                                            \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+
+%%%%%%%%%%%%%%%%%%
+% M11 VERSUS M12 %
+%%%%%%%%%%%%%%%%%%
+\subsection{M$_{1,2}$ \textit{vs.} M$_{1,1}$} \label{appendix:M12vM11}
+
+%%%%% MSP1 %%%%%
+\begin{sidewaystable}
+\centering
+\caption[Likelihood ratio test for comparing RCMs M$_{1,2}$ and M$_{1,1}$, MSP1 antigen data]{Comparison between the two age-dependent SRR models M$_{1,2}$ and M$_{1,1}$ using the likelihood ratio test. Data used from the immune responses to \textit{P. falciparum}-MSP1 antigen in samples from the 21 villages. Both models assume constant SCR ($\lambda$) in the population. Model M$_{1,1}$ assumes constant SRR ($\rho_1$) for ages below $\uptau$, and a lower rate ($\rho_2$) after cut-off. Model M$_{1,2}$ assumes $\rho_2=0$ after $\uptau$. LogL refers to the log-likelihood function evaluated at the respective maximum likelihood estimates using profile likelihood method. P-value is associated with the log-likelihood ratio test comparing the nested model M$_{1,2}$ with M$_{1,1}$. Estimated 95\% confidence intervals including $>$10 suggest the model did not have sufficient information to accurately estimate the lower and upper limits.}
+\label{tab:M12.M11.msp1}
+\begin{adjustbox}{width=\linewidth}
+\input{tables/table_M12vM11_msp1.tex}
+\end{adjustbox}
+\end{sidewaystable}
+
+%%%%% MSP2 %%%%%
+\begin{sidewaystable}
+\centering
+\caption[Likelihood ratio test for comparing RCMs M$_{1,2}$ and M$_{1,1}$, MSP2 antigen data]{Comparison between the two age-dependent SRR models M$_{1,2}$ and M$_{1,1}$ using the likelihood ratio test. Data used from the immune responses to \textit{P. falciparum}-MSP2 antigen in samples from the 21 villages. Both models assume constant SCR ($\lambda$) in the population. Model M$_{1,1}$ assumes constant SRR ($\rho_1$) for ages below $\uptau$, and a lower rate ($\rho_2$) after cut-off. Model M$_{1,2}$ assumes $\rho_2=0$ after $\uptau$. LogL refers to the log-likelihood function evaluated at the respective maximum likelihood estimates using profile likelihood method. P-value is associated with the log-likelihood ratio test comparing the nested model M$_{1,2}$ with M$_{1,1}$. Estimated 95\% confidence intervals including $>$10 suggest the model did not have sufficient information to accurately estimate the lower and upper limits.}
+\label{tab:M12.M11.msp2}
+\begin{adjustbox}{width=\linewidth}
+\input{tables/table_M12vM11_msp2.tex}
+\end{adjustbox}
+\end{sidewaystable}
+
+%%%%% AMA1 %%%%%
+\begin{sidewaystable}
+\centering
+\caption[Likelihood ratio test for comparing RCMs M$_{1,2}$ and M$_{1,1}$, AMA1 antigen data]{Comparison between the two age-dependent SRR models M$_{1,2}$ and M$_{1,1}$ using the likelihood ratio test. Data used from the immune responses to \textit{P. falciparum}-AMA1 antigen in samples from the 21 villages. Both models assume constant SCR ($\lambda$) in the population. Model M$_{1,1}$ assumes constant SRR ($\rho_1$) for ages below $\uptau$, and a lower rate ($\rho_2$) after cut-off. Model M$_{1,2}$ assumes $\rho_2=0$ after $\uptau$. LogL refers to the log-likelihood function evaluated at the respective maximum likelihood estimates using profile likelihood method. P-value is associated with the log-likelihood ratio test comparing the nested model M$_{1,2}$ with M$_{1,1}$. Estimated 95\% confidence intervals including $>$10 suggest the model did not have sufficient information to accurately estimate the lower and upper limits.}
+\label{tab:M12.M11.ama1}
+\begin{adjustbox}{width=\linewidth}
+\input{tables/table_M12vM11_ama1.tex}
+\end{adjustbox}
+\end{sidewaystable}
+
+\newpage
+
+%%%%%%%%%%%%%%%%%
+% M0 VERSUS M12 %
+%%%%%%%%%%%%%%%%%
+
+\subsection{M$_{0}$ \textit{vs.} M$_{1,2}$} \label{appendix:M0vM12}
+
+%%%%% MSP2 %%%%%
+\begin{sidewaystable}
+\centering
+\caption[Likelihood ratio test for comparing RCMs M$_0$ and M$_{1,2}$, MSP2 antigen data]{Comparison between models M$_0$ and M$_{1,2}$ using the likelihood ratio test. Data used from the immune responses to \textit{P. falciparum}-MSP2 antigen in samples from the 21 villages. Model M$_0$ assumes a constant SCR and SRR ($\lambda$ and $\rho$, respectively), while model M$_{1,2}$ assumes a constant SCR, $\lambda_1$ for ages $<\uptau$ and $\lambda_2=0$ otherwise. LogL refers to the log-likelihood function evaluated at the respective maximum likelihood estimates using profile likelihood method. P-value is associated with the log-likelihood ratio test comparing the nested model M$_0$ with M$_{1,2}$. Estimated 95\% confidence intervals including $>$10 suggest the model did not have sufficient information to accurately estimate the lower and upper limits. This event can be mostly seen at high altitude villages.}
+\label{tab:M0.M12.msp2}
+\begin{adjustbox}{width=\linewidth}
+\input{tables/table_M0vM12_msp2.tex}
+\end{adjustbox}
+\end{sidewaystable}
+
+%%%%% AMA1 %%%%%
+\begin{sidewaystable}
+\centering
+\caption[Likelihood ratio test for comparing RCMs M$_0$ and M$_{1,2}$, AMA1 antigen data]{Comparison between models M$_0$ and M$_{1,2}$ using the likelihood ratio test. Data used from the immune responses to \textit{P. falciparum}-AMA1 antigen in samples from the 21 villages. Model M$_0$ assumes a constant SCR and SRR ($\lambda$ and $\rho$, respectively), while model M$_{1,2}$ assumes a constant SCR, $\lambda_1$ for ages $<\uptau$ and $\lambda_2=0$ otherwise. LogL refers to the log-likelihood function evaluated at the respective maximum likelihood estimates using profile likelihood method. P-value is associated with the log-likelihood ratio test comparing the nested model M$_0$ with M$_{1,2}$. Estimated 95\% confidence intervals including $>$10 suggest the model did not have sufficient information to accurately estimate the lower and upper limits. This event can be mostly seen at high altitude villages.}
+\label{tab:M0.M12.ama1}
+\begin{adjustbox}{width=\linewidth}
+\input{tables/table_M0vM12_ama1.tex}
+\end{adjustbox}
+\end{sidewaystable}
+
+\newpage
+
+%%%%%%%%%%%%%%%%%
+% M0 VERSUS M2 %
+%%%%%%%%%%%%%%%%%
+
+\subsection{M$_{0}$ \textit{vs.} M$_{2}$} \label{appendix:M0vM2}
+%%%%% MSP2 %%%%%
+\begin{sidewaystable}
+\centering
+\caption[Likelihood ratio test for comparing RCMs M$_0$ and M$_{2}$, MSP2 antigen data]{Comparative analysis of the results from models  M$_{0}$ and M$_{2}$, referring all 21 villages, considering MSP2 individual status as the outcomes. Model M$_{0}$ assumes constant SCR ($\lambda$) and SRR ($\rho$) for all ages. Model M$_{2}$ also assumes constant SRR, and a change in SCR after the cutoff parameter, $\uptau^*$. logL refers to the log-likelihood function evaluated at the respective maximum likelihood estimates using the profile likelihood method. p-value is associated with the log-likelihood ratio test comparing both models.}
+\label{tab:M0.M2.msp2}
+\begin{adjustbox}{width=\linewidth}
+\input{tables/table_M0vM2_msp2.tex}
+\end{adjustbox}
+\end{sidewaystable}
+
+%%%%% AMA1 %%%%%
+\begin{sidewaystable}
+\centering
+\caption[Likelihood ratio test for comparing RCMs M$_0$ and M$_{2}$, AMA1 antigen data]{Comparative analysis of the results from models  M$_{0}$ and M$_{2}$, referring all 21 villages, considering AMA1 individual status as the outcomes. Model M$_{0}$ assumes constant SCR ($\lambda$) and SRR ($\rho$) for all ages. Model M$_{2}$ also assumes constant SRR, and a change in SCR after the cutoff parameter, $\uptau^*$. logL refers to the log-likelihood function evaluated at the respective maximum likelihood estimates using the profile likelihood method. p-value is associated with the log-likelihood ratio test comparing both models.}
+\label{tab:M0.M2.ama1}
+\begin{adjustbox}{width=\linewidth}
+\input{tables/table_M0vM2_ama1.tex}
+\end{adjustbox}
+\end{sidewaystable}
+
+
+\newpage
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% MODEL M2 ESTIMATED SEROPREVALENCE FOR MSP2 %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsection{MSP2 estimated seroprevalence} \label{appendix:M2.seroprev.msp2}
+
+\begin{figure}[H]
+\center
+\begin{adjustbox}{width=\linewidth,totalheight=\textheight-6\baselineskip}
+\includegraphics[width=\columnwidth]{images/Seroprevalence_M0vM12_msp2.pdf}
+\end{adjustbox}
+\caption[Estimated MSP2 seroprevalence for models M$_0$ and M$_{1,2}$]{Fits for the estimated MSP2 antigen seroprevalence for the 21 assessed villages, using models M$_0$ (blue lines) and M$_{1,2}$ (green lines), with the cutoff parameter of the latter signalled. Each row of graphs represents data from the transects (identified on the right hand side), where villages are ordered by decreasing altitude (and increasing malaria incidence). In the different plots, the dots represent the observed seroprevalence of distinct age groups by splitting the sampled age distribution into similar bins. P-values from the resulting likelihood ratio tests are identified.}
+\label{fig:msp2.seroprevalence.M0.M12}
+\end{figure}
+
+
+\begin{figure}[H]
+\center
+\begin{adjustbox}{width=\linewidth,totalheight=\textheight-5\baselineskip}
+\includegraphics[width=\columnwidth]{images/Seroprevalence_M0vM2_msp2.pdf}
+\end{adjustbox}
+\caption[Estimated MSP2 seroprevalence for models M$_0$ and M$_2$]{Fits for the estimated MSP2 antigen seroprevalence for the 21 assessed villages, using models M$_0$ (blue lines) and M$_2$ (light red lines), with the cutoff parameter of the latter signalled, identifying the change in SCR happening in years before sampling. Each row of graphs represents data from the transects (identified on the right hand side), where villages are ordered by decreasing altitude (and increasing malaria incidence). In the different plots, the dots represent the observed seroprevalence of distinct age groups by splitting the sampled age distribution into similar bins. P-values from the resulting likelihood ratio tests are identified.}
+\label{fig:msp2.seroprevalence.M0.M2}
+\end{figure}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% MODEL M2 ESTIMATED SEROPREVALENCE FOR AMA1 %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsection{AMA1 estimated seroprevalence} \label{appendix:M2.seroprev.ama1}
+
+\begin{figure}[H]
+\center
+\begin{adjustbox}{width=\linewidth,totalheight=\textheight-6\baselineskip}
+\includegraphics[width=\columnwidth]{images/Seroprevalence_M0vM12_ama1.pdf}
+\end{adjustbox}
+\caption[Estimated AMA1 seroprevalence for models M$_0$ and M$_{1,2}$]{Fits for the estimated AMA1 antigen seroprevalence for the 21 assessed villages, using models M$_0$ (blue lines) and M$_{1,2}$ (green lines), with the cutoff parameter of the latter signalled. Each row of graphs represents data from the transects (identified on the right hand side), where villages are ordered by decreasing altitude (and increasing malaria incidence). In the different plots, the dots represent the observed seroprevalence of distinct age groups by splitting the sampled age distribution into similar bins. P-values from the resulting likelihood ratio tests are identified.}
+\label{fig:ama1.seroprevalence.M0.M12}
+\end{figure}
+
+\begin{figure}[H]
+\center
+\begin{adjustbox}{width=\linewidth,totalheight=\textheight-5\baselineskip}
+\includegraphics[width=\columnwidth]{images/Seroprevalence_M0vM2_ama1.pdf}
+\end{adjustbox}
+\caption[Estimated AMA1 seroprevalence for models M$_0$ and M$_2$]{Fits for the estimated AMA1 antigen seroprevalence for the 21 assessed villages, using models M$_0$ (blue lines) and M$_2$ (light red lines), with the cutoff parameter of the latter signalled, identifying the change in SCR happening in years before sampling. Each row of graphs represents data from the transects (identified on the right hand side), where villages are ordered by decreasing altitude (and increasing malaria incidence). In the different plots, the dots represent the observed seroprevalence of distinct age groups by splitting the sampled age distribution into similar bins. P-values from the resulting likelihood ratio tests are identified.}
+\label{fig:ama1.seroprevalence.M0.M2}
+\end{figure}
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% R FUNCTIONS TO ESTIMATE TRANSITION RATES FROM M11 %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\subsection{R functions used to estimate transition rates from model M$_{1,1}$}
+\label{appendix:r.function}
+\definecolor{mygreen}{rgb}{0,0.6,0}
+\definecolor{mygray}{rgb}{0.5,0.5,0.5}
+\definecolor{mymauve}{rgb}{0.58,0,0.82}
+\lstset{
+        language=R,
+        basicstyle=\scriptsize\ttfamily,
+        commentstyle=\ttfamily\color{mygreen},
+        numbers=left,
+        numberstyle=\ttfamily\color{black}\footnotesize,
+        stepnumber=1,
+        numbersep=5pt,
+        backgroundcolor=\color{white},
+        showspaces=false,
+        showstringspaces=false,
+        showtabs=false,
+        frame=single,
+        tabsize=2,
+        captionpos=b, % sets the caption-position to bottom
+        breaklines=true, % sets automatic line breaking
+        breakatwhitespace=false, % sets if automatic breaks should only happen at whitespace
+        title=\lstname,
+        escapeinside={},
+        keywordstyle={},
+        morekeywords={},
+        backgroundcolor=\color{white}, % choose the background color; you must add \usepackage{color} or \usepackage{xcolor}; should come as last argument
+        keepspaces=true,                 % keeps spaces in text, useful for keeping indentation of code (possibly needs columns=flexible)
+        keywordstyle=\ttfamily\color{blue},       % keyword style
+        morekeywords={*,...},            % if you want to add more keywords to the set
+        numbersep=5pt,                   % how far the line-numbers are from the code
+        rulecolor=\color{black},         % if not set, the frame-color may be changed on line-breaks within not-black text (e.g. comments (green here))
+        title=\ttfamily{jtm\_functions\_M11.R}
+}
+
+\lstinputlisting[language=R]{appendices/jtm_functions_M11.R}
+
+\end{appendices}

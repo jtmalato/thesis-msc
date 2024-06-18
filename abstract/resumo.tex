@@ -1,0 +1,65 @@
+\addcontentsline{toc}{chapter}{Resumo}
+
+\begin{resumo}
+
+% \begin{itemize}
+% % What's the problem?
+% 	\item Qual é o problema?
+% % Why is it interesting?
+% 	\item Porque é que ele é interessante?
+% % What's the solution?
+% 	\item Qual é a solução?
+% % What follows from the solution?
+% 	\item O que resulta (implicações) da solução?
+% \end{itemize}
+A malária (paludismo) é uma doença infecciosa, reconhecida, nas últimas décadas, como sendo um dos maiores desafios para a saúde pública.
+A malária é endémica em grande parte da Africa Subsaariana, Sudeste asiático e América Latina, estimando-se cerca de 216 milhões de novos casos de infeção e 445 000 mortes, só em 2016.
+Os estudos produzidos nos últimos anos têm permitido abordagens efetivas para o controlo e para uma eliminação mais eficiente dos seus transmissores (os mosquitos do género \textit{Anopheles}), bem como o desenvolvimento de tratamentos diretos na redução do parasita \textit{Plamodium falciparum}, a espécie mais incidente nos países da Africa Subsaariana.
+Com estes avanços, a incidência de malária tem gradualmente vindo a ser reduzida, havendo cada vez mais áreas a transitar para estados de pré-eliminação e eliminação.
+Devido a estes desenvolvimentos, surgem novos desafios para a estimação da incidência dos locais e da intensidade de transmissão.
+As regiões onde a intensidade de transmissão é mantida baixa produzem infeções assintomáticas, tornando os indivíduos neste estado transmissores “invisíveis” de malária, uma vez que os métodos mais comuns para medir os níveis de malária baseiam-se na deteção objetiva de casos de infeção.
+Como alternativa a estas medidas, surge a serologia, aplicada em análises sero-epidemiológicas.
+Este método põe de lado a análise de indivíduos infetados/não infetados, passando a lidar com a exposição/não exposição dos indivíduos ao parasita \textit{P. falciparum} e o desenvolvimento de anticorpos pelo sistema imunitário.
+A serologia mede e identifica a presença de anticorpos específicos para antigénios do parasita, podendo definir um gradiente para a intensidade de transmissão de uma dada população analisada, mesmo em locais de baixa incidência.
+
+Esta tese teve como objetivo descrever e estimar a intensidade de transmissão do parasita \textit{P. falciparum} de uma amostra estratificada de 5058 indivíduos distribuídos em 21 vilas ao longo do Nordeste da Tanzânia.
+Estes dados foram originalmente recolhidos e aplicados num estudo de referência para a área de sero-epidemiologia, tendo como intuito estimar a intensidade de transmissão associada às variáveis altitude e precipitação.
+
+Numa primeira abordagem, os principais fatores de risco associados à prevalência de infeção e heterogeneidade nos vários locais foram identificados.
+Através da construção e seleção do melhor modelo linear generalizado (generalised linear model, GLM), a influência destes determinantes de transmissão foi estudada.
+Nesta análise, determinantes representativos da altitude, agregado de vilas, grupo étnico, ou grupo etário, demonstraram ter uma influência significativa quando adicionados no modelo, tendo um efeito direto na probabilidade de infeção.
+O GLM também caracterizou os três determinantes de exposição usados, relativos aos três antigénios estudados ao longo do projeto: merozoite surface protein 1 (MSP1), merozoite surface protein 2 (MSP2) e apical merozoite antigen 1 (AMA1).
+A presença destes determinantes no modelo demonstrou a sua utilidade como bons indicadores de infeções de malária, aumentando muito a probabilidade de infeção de indivíduos sempre que estavam presentes.
+
+Tendo identificado os anticorpos para os antigénios como uma alternativa ao estado de infeção das populações, a segunda parte da tese aplicou diferentes propostas sero-epidemiológicas para estudar a intensidade de transmissão das diferentes vilas estudadas.
+Para tal, diferentes modelos catalíticos reversíveis (reverse catalytic models, RCMs) foram propostos.
+Estes modelos baseiam-se na ideia de que indivíduos transitam entre dois estados serológicos (seronegativo e seropositivo), transitando de um para outro a diferentes taxas de transição, a taxa de seroconversão (seroconversion rate, SCR) e a taxa de serorreversão (seroreversion rate, SRR).
+A SCR representa a taxa média anual a que indivíduos de uma determinada idade (em anos) passam de seronegativos para seropositivos, após uma infeção.
+Já a SRR representa a taxa média anual a que indivíduos seropositivos regressam a um estado seronegativo devido ao decaimento gradual dos anticorpos.
+
+Quatro RCMs foram aplicados aos dados serológicos.
+Um primeiro modelo M$_{0}$ assumiu as taxas SCR e SRR como constantes ao longo de todas as idades.
+Dois modelos consideraram SRR dependente da idade, M$_{1,1}$ e M$_{1,2}$.
+Os dois modelos assumiram a SCR de cada vila como constante ao longo da sequência de idades e a ocorrência de uma redução de SRR dada uma idade estimada.
+O modelo M$_{1,2}$ representava uma versão mais restrita, considerando que após a idade de redução, a SRR era igual a zero.
+Por fim, o RCM M$_{2}$ proposto considerava a ocorrência de algum efeito externo (e.g.: campanhas de intervenção e prevenção de malária nos locais estudados) que tenha ocorrido nas últimas décadas, influenciando a intensidade de transmissão.
+Este modelo assumiu a SRR estimada como constante ao longo dos anos, com uma variação na SCR, acontecendo um número estimado de anos antes da recolha das amostras.
+
+Os resultados deste estudo mostraram que qualquer um dos modelos tem o potencial de descrever a intensidade de transmissão, bem como a seroprevalência das várias vilas estudadas.
+A análise dos resultados dos diferentes modelos mostrou que as propostas tidas como mais próximas da realidade (modelos M$_{1,2}$ e M$_{0}$ ) foram rejeitadas, na sua maioria, quando comparadas com o modelo de taxas constantes, M$_{0}$ (testes de razão de verosimilhanças, valores-p $>0.05$).
+O modelo M$_{1,2}$, com SRR dependente da idade, foi apenas significativo numa minoria de vilas a altitudes intermédias (altitudes entre os 600 e os 1200 metros).
+A não rejeição da hipótese nula, aquando da comparação com o modelo M$_{2}$, demonstrou poucos episódios significativos onde a alteração de intensidade de transmissão foi observável.
+Este modelo foi apenas significativo em vilas com maiores taxas de transmissão estimadas, a altitudes baixas e intermédias.
+
+Os RCM ainda que sejam modelos específicos para populações infinitas produziram estimativas paramétricas aceitáveis.
+Uma análise de correlação entre M$_{0}$ e M$_{1,2}$ demonstrou que o modelo estatisticamente preferido, tendencialmente subestimou as estimativas de SCR.
+Esta taxa, um \textit{proxy} da intensidade de transmissão, é geralmente a medida de interesse nas análises sero-epidemiológicas.
+Situações de baixa intensidade de transmissão, que requerem uma maior precisão das estimativas, devem ter em conta estes resultados dados por M$_{0}$.
+O melhoramento dos modelos M$_{1,1}$ e M$_{1,2}$ poderá trazer novos resultados sobre a importância da SRR na estimação mais precisa das intensidades de transmissão.
+Já o modelo M$_{2}$ continuará a servir como uma ferramenta para controlo e evolução do estado serológico das populações intervencionadas.
+
+Os dois modelos que consideram o efeito ao longo do tempo do sistema imunitário em regiões de malária endémica, M$_{1,1}$ e M$_{1,2}$, foram desenvolvidos paralelamente a esta tese, tendo sido propostos num artigo científico presentemente em avaliação.
+
+\textbf{Palavras-chave:} malária, intensidade de transmissão, heterogeneidade de transmissão, epidemiologia, serologia, seroprevalência, taxa de seroconversão, taxa de seroreversão.
+
+\end{resumo}

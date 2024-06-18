@@ -1,0 +1,49 @@
+% \begin{tabular}{ccrcrcc} 
+% \toprule
+% \multicolumn{1}{c}{Coefficient} & \multicolumn{1}{c}{\begin{tabular}[c]{@{}c@{}}Factor\\level\end{tabular}} & \multicolumn{1}{c}{\begin{tabular}[c]{@{}c@{}}Parameter\\estimate\end{tabular}} & \multicolumn{1}{c}{\begin{tabular}[c]{@{}c@{}}Standard\\error\end{tabular}} & \multicolumn{1}{c}{p-value} & \multicolumn{1}{c}{Odds ratio} & \multicolumn{1}{c}{\begin{tabular}[c]{@{}c@{}}95\% Confidence\\interval\end{tabular}}  \\ 
+% \midrule
+% (Intercept)                        & ---           & $-$0.775   & 0.212   & $<$0.001   & 0.46 & (0.30, 0.70)   \\
+% \textit{Altitude}                  & ---           & $-$0.148   & 0.019   & $<$0.001   & 0.86 & (0.83, 0.89)   \\
+% \textit{AgeGp}                     & 5$-$14        &  0.095     & 0.190   & 0.619      & 1.10 & (0.76, 1.60)   \\
+%                                   & 15$-$45       & $-$1.712   & 0.196   & $<$0.001   & 0.18 & (0.12, 0.26)   \\
+% \textit{EthGp}                     & Wachaga       &  0.623     & 0.320   & 0.052      & 1.86 & (1.00, 3.51)   \\
+%                                   & Wapare        & $-$0.224   & 0.209   & 0.284      & 0.80 & (0.53, 1.21)   \\
+%                                   & Wasambaa      &  0.192     & 0.160   & 0.231      & 1.21 & (0.89, 1.66)   \\
+% \textit{Transect}                  & Rombo         & $-$0.971   & 0.322   & 0.003      & 0.38 & (0.20, 0.71)   \\
+%                                   & N. Pare       & $-$1.478   & 0.337   & $<$0.001   & 0.23 & (0.12, 0.43)   \\
+%                                   & S. Pare       & $-$0.420   & 0.247   & 0.089      & 0.66 & (0.40, 1.06)   \\
+%                                   & W. Usamb. 1   &  0.463     & 0.214   & 0.030      & 1.59 & (1.04, 2.42)   \\
+%                                   & W. Usamb. 2   &  0.014     & 0.212   & 0.946      & 1.01 & (0.67, 1.54)   \\
+% \textit{AMA1}                      & 1             &  0.664     & 0.098   & $<$0.001   & 1.94 & (1.60, 2.36)   \\
+% \textit{MSP1}                      & 1             &  0.500     & 0.097   & $<$0.001   & 1.65 & (1.36, 1.99)   \\
+% \textit{MSP2}                      & 1             &  0.393     & 0.095   & $<$0.001   & 1.48 & (1.23, 1.79)   \\
+% \textit{Altitude $\times$ AgeGp}   & 5$-$14        &  0.022     & 0.022   & 0.316      & 1.02 & (0.98, 1.07)   \\
+%                                   & 15$-$45       &  0.114     & 0.023   & $<$0.001   & 1.12 & (1.07, 1.17)   \\
+% \bottomrule
+% \end{tabular}
+\begin{tabular}{ccrcrcc} 
+\toprule
+\multicolumn{1}{c}{Coefficient} & \multicolumn{1}{c}{\begin{tabular}[c]{@{}c@{}}Factor\\level\end{tabular}} & \multicolumn{1}{c}{\begin{tabular}[c]{@{}c@{}}Parameter\\estimate, $\widehat{\beta}$\end{tabular}} & \multicolumn{1}{c}{\begin{tabular}[c]{@{}c@{}}Standard\\error\end{tabular}} & \multicolumn{1}{c}{p-value} & 
+\multicolumn{1}{c}{\begin{tabular}[c]{@{}c@{}}Odds ratio,\\$e^{\widehat{\beta}}$\end{tabular}} &
+\multicolumn{1}{c}{\begin{tabular}[c]{@{}c@{}}95\% Confidence\\interval\end{tabular}}  \\ 
+\midrule
+(Intercept)                        & ---           & $-$0.863   & 0.218   & $<$0.001   & 0.42   & (0.28, 0.65)   \\
+\textit{Altitude}                  & ---           & $-$0.148   & 0.019   & $<$0.001   & 0.86   & (0.83, 0.89)   \\
+\textit{AgeGp}                     & 5$-$14        &    0.112   & 0.190   & 0.555      & 1.12   & (0.77, 1.63)   \\
+                                   & 15$-$45       & $-$1.681   & 0.197   & $<$0.001   & 0.19   & (0.13, 0.27)   \\
+\textit{Gender}                    & Male          &    0.134   & 0.083   & 0.105      & 1.14   & (0.97, 1.34)   \\
+\textit{EthGp}                     & Wachaga       &    0.619   & 0.320   & 0.053      & 1.86   & (1.00, 3.50)   \\
+                                   & Wapare        & $-$0.228   & 0.209   & 0.276      & 0.80   & (0.53, 1.20)   \\
+                                   & Wasambaa      &    0.194   & 0.160   & 0.226      & 1.21   & (0.89, 1.67)   \\
+\textit{Transect}                  & Rombo         & $-$0.956   & 0.322   & 0.003      & 0.38   & (0.20, 0.72)   \\
+                                   & N. Pare       & $-$1.470   & 0.337   & $<$0.001   & 0.23   & (0.12, 0.44)   \\
+                                   & S. Pare       & $-$0.407   & 0.247   & 0.099      & 0.67   & (0.41, 1.08)   \\
+                                   & W. Usamb. 1   &    0.472   & 0.214   & 0.027      & 1.60   & (1.05, 2.44)   \\
+                                   & W. Usamb. 2   &    0.028   & 0.212   & 0.894      & 1.03   & (0.68, 1.56)   \\
+\textit{AMA1}                      & 1             &    0.666   & 0.099   & $<$0.001   & 1.95   & (1.61, 2.36)   \\
+\textit{MSP1}                      & 1             &    0.505   & 0.097   & $<$0.001   & 1.66   & (1.37, 2.00)   \\
+\textit{MSP2}                      & 1             &    0.396   & 0.095   & $<$0.001   & 1.49   & (1.23, 1.79)   \\
+\textit{Altitude $\times$ AgeGp}   & 5$-$14        &    0.022   & 0.022   & 0.335      & 1.02   & (0.98, 1.07)   \\
+                                   & 15$-$45       &    0.114   & 0.023   & $<$0.001   & 1.12   & (1.07, 1.17)   \\
+\bottomrule
+\end{tabular}
